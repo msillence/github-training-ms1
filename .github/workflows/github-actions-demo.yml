@@ -37,8 +37,10 @@ jobs:
     runs-on: [ Test, ubuntu-latest ]
     steps:
       - name: test
-        run: 
+        run: |
           echo "Testing..."
+          sleep 10
+          echo "done"
         
   
   
