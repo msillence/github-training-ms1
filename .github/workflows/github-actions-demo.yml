@@ -54,7 +54,9 @@ jobs:
   Production:
     runs-on: ubuntu-latest
     if: github..inputs.environmentsLabel == 'production'
-    environment: production
+    environment: 
+      name: production
+      url: 'https://writeabout.net'
     needs: [ Test1, LoadTest ]
     steps:
       - name: deploy1
