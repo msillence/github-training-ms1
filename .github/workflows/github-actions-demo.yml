@@ -35,13 +35,20 @@ jobs:
           tree
   Test1:
     runs-on: [ Test, ubuntu-latest ]
+    needs: Build123
+    steps:
+      - name: test
+        run: |
+          echo "Testing..."
+  LoadTest:
+    runs-on: [ Test, ubuntu-latest ]
+    needs: Build123
     steps:
       - name: test
         run: |
           echo "Testing..."
           sleep 10
           echo "done"
-        
   
   
 
