@@ -54,7 +54,7 @@ jobs:
   Production:
     runs-on: ubuntu-latest
     if: github..inputs.environmentsLabel == 'production'
-    environment: Production
+    environment: production
     needs: [ Test1, LoadTest ]
     steps:
       - name: deploy1
