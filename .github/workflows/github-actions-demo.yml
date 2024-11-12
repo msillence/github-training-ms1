@@ -53,7 +53,7 @@ jobs:
           echo "done"
   Production:
     runs-on: ubuntu-latest
-    if: github..inputs.environmentsLabel == 'production'
+    if: github.inputs.environmentsLabel == 'production'
     environment: 
       name: production
       url: 'https://writeabout.net'
