@@ -53,7 +53,7 @@ jobs:
           echo "done"
   Production:
     runs-on: ubuntu-latest
-    if: github.environmentsLabel == 'Production'
+    if: github.environmentsLabel == 'production'
     environment: Production
     needs: [ Test1, LoadTest ]
     steps:
