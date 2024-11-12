@@ -21,7 +21,7 @@ jobs:
           echo "person triggering build ${{github.event_name}}"
           echo "name of branch ${{github.ref }} "
       - name: "checkout"
-        uses: actions/checkout@4.2.2
+        uses: actions/checkout@v4.2.2
 
       - name: list files in repo
         run: |
