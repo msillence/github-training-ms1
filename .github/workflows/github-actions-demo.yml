@@ -34,14 +34,17 @@ jobs:
           echo "repo ${{github.repository }} contains files"
           tree
   Test1:
-    runs-on: [ Test, ubuntu-latest ]
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
     needs: Build123
     steps:
       - name: test
         run: |
           echo "Testing..."
+    environment: Test
   LoadTest:
-    runs-on: [ Load-test, ubuntu-latest ]
+    runs-on: ubuntu-latest
+    environment: Load-test
     needs: Build123
     steps:
       - name: test
