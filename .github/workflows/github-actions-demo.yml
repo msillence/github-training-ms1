@@ -33,6 +33,13 @@ jobs:
         run: |
           echo "repo ${{github.repository }} contains files"
           tree
+  Test1:
+    runs-on: [ Test, ubuntu-latest ]
+    steps:
+      - name: test
+        run: 
+          echo "Testing..."
+        
   
   
 
