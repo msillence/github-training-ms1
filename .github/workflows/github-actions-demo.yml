@@ -41,7 +41,7 @@ jobs:
         run: |
           echo "Testing..."
   LoadTest:
-    runs-on: [ LoadTest, ubuntu-latest ]
+    runs-on: [ Load-test, ubuntu-latest ]
     needs: Build123
     steps:
       - name: test
