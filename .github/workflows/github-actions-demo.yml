@@ -50,7 +50,7 @@ jobs:
         run: |
           echo "Load Testing..."
           sleep 10
-          echo "done"
+          echo "done ${{github.inputs.environmentsLabel}}"
   Production:
     runs-on: ubuntu-latest
     if: github.inputs.environmentsLabel == 'production'
