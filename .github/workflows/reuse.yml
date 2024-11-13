@@ -15,4 +15,4 @@ jobs:
     steps:
       - run: | 
           echo "Time was ${{ needs.call-workflow.outputs.time }}"
-          printf "${{ join(needs.call-workflow.outputs.*, '\n') }}"
+          printf "${{ toJSON(needs.call-workflow.outputs) }}"
