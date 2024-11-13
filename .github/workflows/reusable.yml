@@ -6,6 +6,8 @@ on:
       who-to-greet:
         type: string
         description: "who to greet"
+        required: true
+        default: World        
         
 jobs:
   reusable-job:
