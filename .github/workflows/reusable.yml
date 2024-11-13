@@ -22,7 +22,7 @@ jobs:
 
       - name: current-time
         id: time
-        run: echo "time=$(date) >> $$GITHUB_OUTPUT
+        run: echo "time=$(date) >> $GITHUB_OUTPUT
 
     
     
