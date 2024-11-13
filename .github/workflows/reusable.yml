@@ -7,7 +7,11 @@ on:
         type: string
         description: "who to greet"
         required: true
-        default: World        
+        default: World
+    outputs:
+      current-time:
+        description: "time of greeting"
+        value: ${{jobs.reusable-job.outputs.current-time }}
         
 jobs:
   reusable-job:
@@ -15,4 +19,10 @@ jobs:
     steps:
       - name: greet
         run: echo "hello ${{github.event.inputs.who-to-greet}}"
+
+      - name: current-time
+        id: time
+        run: echo "time=$(date) >> $$GITHUB_OUTPUT
+
+    
     
