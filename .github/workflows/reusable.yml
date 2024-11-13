@@ -9,6 +9,9 @@ on:
         required: true
         default: World
     outputs:
+      test:
+        description: "time of greeting"
+        value: "test ${{inputs.who-to-greet}"
       current-time:
         description: "time of greeting"
         value: ${{ jobs.reusable-job.outputs.current-time }}
