@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: greet
-        run: echo "hello ${{github.event.inputs.who-to-greet}}"
+        run: echo "hello ${{inputs.who-to-greet}}"
 
       - name: current-time
         id: time
