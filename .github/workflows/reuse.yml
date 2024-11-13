@@ -15,4 +15,4 @@ jobs:
     steps:
       - run: | 
           echo "Time was ${{ needs.call-workflow.outputs.current-time }}"
-          printf "${{ join(steps.create-output.outputs.*, '\n') }}"
+          printf "${{ join(needs.call-workflow.outputs.*, '\n') }}"
