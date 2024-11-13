@@ -14,7 +14,7 @@ on:
         value: "test"
       current-time:
         description: "time of greeting"
-        value: ${{ steps.current-time.outputs.time }}
+        value: ${{ jobs.steps.current-time.outputs.time }}
         
 jobs:
   reusable-job:
